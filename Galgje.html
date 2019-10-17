@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simple "Hangman" Game</h1>
+    <h3>No People wil actually be harmed during this game.</h3>
+
+    <input type="text" id="myText" value="Guess a letter " >
+    <button onclick="checkGuess()" >Guess</button>
+    <button onclick = "restartGame()">Restart</button>
+    <p>Current word:</p>
+    <h2 id="word"> _ _ _ _ _ _ </h2>
+    <h3 id="totalLives">You have 5 lives remaining.</h3> <!-- tekst moet aangepast dmv DOM bezig met functie uitschrijven nog niet klaar.-->
+
+<script src = "Galgje.js"></script>
+</body>
+</html>
