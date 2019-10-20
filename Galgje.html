@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Hangman Fleur</title>
+    <link rel="stylesheet" type="text/css" href="Galgje.css" />
 </head>
+
 <body>
-    <h1>Simple "Hangman" Game</h1>
-    <h3>No People wil actually be harmed during this game.</h3>
+    <div id='main-div'>
+        <h1> Simple "Hangman" Game</h1>
+        <hr />
+        <h3>No People wil actually be harmed during this game. Please try to gues the word.</h3>
+        <br /> <br />
 
-    <input type="text" id="myText" value="Guess a letter " >
-    <button onclick="checkGuess()" >Guess</button>
-    <button onclick = "restartGame()">Restart</button>
-    <p>Current word:</p>
-    <h2 id="word"> _ _ _ _ _ _ </h2>
-    <h3 id="totalLives">You have 5 lives remaining.</h3> <!-- tekst moet aangepast dmv DOM bezig met functie uitschrijven nog niet klaar.-->
+        <input type="text" id="inputGuess" pattern="[a-zA-Z]{1,1}" value="Guess a letter ">
 
-<script src = "Galgje.js"></script>
+        <button onclick="checkGuess()">Guess</button>
+        <button onclick="restartGame()">Restart</button>
+
+        <div class='results'> 
+            <div id="wordtoguess"> </div>
+
+            <div id="allready-guessed"> </div>
+ 
+            <p id="huidigeWoord"></p>
+
+            <h2 id="word"> </h2>
+
+            <h3 id="totalLives"></h3>
+        </div>
+    </div>
+
+    <!-- tekst moet aangepast dmv DOM bezig met functie uitschrijven nog niet klaar.-->
+
+    <script src="Galgje.js"></script>
 </body>
+
 </html>
